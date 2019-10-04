@@ -1728,23 +1728,28 @@ gatherlines:
 		if sublist > 0 {
 			para.Content = rawBytes[:sublist]
 		} else {
-			
+
 			// Rolf: checklist feature.
 			if len(rawBytes) > 3 {
 				if rawBytes[0] == '[' && rawBytes[2] == ']' {
 					switch rawBytes[1] {
 					case 'x':
 						rawBytes[2] = 0x92
+						rawBytes[0] = 0xE2
+						rawBytes[1] = 0x98
 					case ' ':
 						rawBytes[2] = 0x90
+						rawBytes[0] = 0xE2
+						rawBytes[1] = 0x98
 					case '/':
 						rawBytes[2] = 0x91
+						rawBytes[0] = 0xE2
+						rawBytes[1] = 0x98
 					}
-					rawBytes[0] = 0xE2
-					rawBytes[1] = 0x98
+
 				}
 			}
-			
+
 			para.Content = rawBytes
 		}
 		p.addChild(para)
