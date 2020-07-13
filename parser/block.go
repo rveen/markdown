@@ -1737,7 +1737,7 @@ gatherlines:
 						rawBytes[2] = 0x92
 						rawBytes[0] = 0xE2
 						rawBytes[1] = 0x98
-					case ' ':
+					default:
 						rawBytes[2] = 0x90
 						rawBytes[0] = 0xE2
 						rawBytes[1] = 0x98
