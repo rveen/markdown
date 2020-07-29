@@ -5,7 +5,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/gomarkdown/markdown/parser"
+	"github.com/rveen/markdown/parser"
 )
 
 // Markdown 1.0.3 reference tests

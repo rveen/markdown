@@ -6,8 +6,8 @@ import (
 
 	"strings"
 
-	"github.com/gomarkdown/markdown/html"
-	"github.com/gomarkdown/markdown/parser"
+	"github.com/rveen/markdown/html"
+	"github.com/rveen/markdown/parser"
 )
 
 func TestEmphasis(t *testing.T) {
